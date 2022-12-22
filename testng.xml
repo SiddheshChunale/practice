@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="tests" thread-count="2">
+	<test name="Test on chrome" >
+    <parameter name="browName" value="firefox"></parameter>
+		<classes>
+			<class name="com.liveproject.LoginTest" />
+		</classes>
+	</test> <!-- Test -->
+    <test name="Test on firefox" >
+    <parameter name="browName" value="chrome"></parameter>
+		<classes>
+			<class name="com.liveproject.LoginTest" />
+		</classes>
+	</test>
+</suite> <!-- Suite -->
